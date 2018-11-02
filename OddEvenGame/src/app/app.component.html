@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+      <app-game-control (gameStarted)="onGameStarted($event)"></app-game-control>
+  </div>
+  <div class="row col-sm-12">
+    <div class="col-sm-6">
+        <app-odd [oddNumber]="oddNumber"></app-odd>
+    </div>
+    <div class="col-sm-6">
+        <app-even [evenNumber]="evenNumber"></app-even>
+    </div>
+  </div>
+</div>
