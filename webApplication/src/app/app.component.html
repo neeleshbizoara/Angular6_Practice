@@ -1,0 +1,10 @@
+<!-- <app-header (navigateTo)="onRecipesRoute($event)"></app-header> -->
+<app-header (navigateTo)="onRoute($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="navigateToLink === 'recipes'"></app-recipes>
+      <app-shopping-list *ngIf="navigateToLink === 'shoppingList'"></app-shopping-list>
+    </div>
+  </div>
+</div>
