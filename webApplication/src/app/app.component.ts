@@ -10,8 +10,7 @@ export class AppComponent {
   navigateToLink:string;
 
   onRoute(data) {
-    debugger;
-    this.navigateToLink = data;
+    this.navigateToLink = data.navigateToLink;
   }
   /*   
   onRecipesRoute(url) {

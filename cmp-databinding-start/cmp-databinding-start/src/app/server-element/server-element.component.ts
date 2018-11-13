@@ -24,7 +24,6 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
 
   ngOnChanges(changes: SimpleChanges) {
     console.log('ngOnChanges called!');
-    debugger;
     
     console.log(changes.name);
 
