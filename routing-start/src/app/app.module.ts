@@ -24,7 +24,8 @@ const appRoutes:Routes = [
     { path: ':id/edit', component: EditServerComponent}
   ]},
   {path: 'something', component: PageNotFoundComponent},
-  {path: 'not-found', redirectTo: 'something'}
+  {path: '**', redirectTo: 'something'}//Wild card route 
+  // Note place this in last as routes get parsed from top to bottom.
 ];
 
 @NgModule({
