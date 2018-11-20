@@ -10,6 +10,7 @@ import { UsersComponent } from "./users/users.component";
 import { HomeComponent } from "./home/home.component";
 import { AuthGuard } from "./auth.guard.service";
 import { CanDeactivateGuard } from "./servers/edit-server/can-deactivate-guard.service";
+import { ErrorPageComponent } from "./error-page/error-page.component";
 
 
 const appRoutes:Routes = [
@@ -25,7 +26,8 @@ const appRoutes:Routes = [
       { path: ':id', component: ServerComponent},
       { path: ':id/edit', component: EditServerComponent, canDeactivate: [CanDeactivateGuard]}
     ]},
-    {path: 'something', component: PageNotFoundComponent},
+    //{path: 'something', component: PageNotFoundComponent},
+    {path: 'something', component: ErrorPageComponent, data: {message: 'Page not found!'}},
     {path: '**', redirectTo: 'something'},//Wild card route 
     // Note place this in last as routes get parsed from top to bottom.
   ];
