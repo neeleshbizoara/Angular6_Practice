@@ -29,8 +29,13 @@ export class EditServerComponent implements OnInit, CanComponentDeactivate {
     );
     this.route.fragment.subscribe();
     const id = +this.route.snapshot.params['id'];
-    this.server = this.serversService.getServer(id);
+    //this.server = this.serversService.getServer(id);
     // Subscribe route params to update the id if params changes
+    this.route.params.subscribe(
+      (queryParams:Params) => {
+        this.server = this.serversService.getServer(+queryParams['id']);
+      }
+    )
     this.serverName = this.server.name;
     this.serverStatus = this.server.status;
   }
