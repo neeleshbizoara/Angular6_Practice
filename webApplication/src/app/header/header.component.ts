@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,22 +8,19 @@ import { Component, OnInit, Output, EventEmitter, AfterViewInit } from '@angular
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   //navigateToLink:string
-  @Output() navigateTo = new EventEmitter<{navigateToLink:string}>();
-  constructor() {  }
+  
+  constructor(private router:Router) {  }
 
   ngOnInit() {
     //this.navigateTo.emit({navigateToLink:'recipes'});
-    this.navigateTo.emit({navigateToLink:'recipes'});
+    //this.navigateTo.emit({navigateToLink:'recipes'});
   }
 
   ngAfterViewInit() {
     
   }
 
-  onSelect(url:string) {
-    this.navigateTo.emit({navigateToLink: url});
-  }
-
+  
   /*onRecipesClick() {
     debugger;
     this.navigateTo.emit({navigateToLink:'recipes'});
