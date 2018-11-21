@@ -1,4 +1,4 @@
-<a style="cursor: pointer;" class="list-group-item clearfix" [routerLink]="[index]"> <!-- Becaues this is a dynamic link so we bind routerLink --> <!-- (click)="onSelected()" -->
+<a style="cursor: pointer;" class="list-group-item clearfix" [routerLink]="[index]" routerLinkActive="active"> <!-- Becaues this is a dynamic link so we bind routerLink --> <!-- (click)="onSelected()" -->
   <div>
     <h4 class="list-group-item-heading">{{recipe.name}}</h4>
     <p class="list-group-item-text">{{recipe.description}}</p>
